@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Registration Form</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background: #f2f2f2;
+      margin: 30px;
+      color: #111;
+    }
+
+    .frame {
+      border: 3px solid #111;
+      background: #fff;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px;
+      box-shadow: 0 0 0 6px rgba(0,0,0,0.03) inset;
+    }
+
+    header {
+      text-align: center;
+      padding: 6px 0 18px;
+      border-bottom: 1px solid #bbb;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .form-area {
+      padding: 6px 10px 30px;
+      min-height: 380px;
+    }
+
+    form .row {
+      display: flex;
+      align-items: flex-start;
+      margin: 10px 0;
+    }
+    form label {
+      width: 130px;                
+      font-weight: 600;
+      padding-top: 6px;
+      font-size: 14px;
+    }
+    form .control {
+      flex: 1;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select {
+      padding: 6px 8px;
+      font-size: 13px;
+      border: 1px solid #999;
+      border-radius: 3px;
+      width: 260px; 
+    }
+    .radios {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      padding-top: 6px;
+    }
+    .radios input { margin-right: 5px; }
+
+    textarea {
+      width: 420px;
+      height: 90px;
+      padding: 8px;
+      border: 1px solid #999;
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    
+    actions {
+      margin-top: 14px;
+      margin-left: 130px; 
+    }
+    button {
+      padding: 6px 12px;
+      border: 1px solid #666;
+      background: #eee;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-right: 8px;
+    }
+
+    footer {
+      border-top: 1px solid #bbb;
+      padding: 18px 10px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 700px) {
+      .frame { padding: 12px; }
+      form label { width: 120px; font-size: 13px; }
+      input[type="text"], select { width: 100%; max-width: 360px; }
+      textarea { width: 100%; max-width: 440px; }
+      .actions { margin-left: 0; }
+      .row { flex-direction: column; align-items:flex-start; }
+      form label { margin-bottom: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <header>
+      <h1>Student Registration Form</h1>
+    </header>
+
+    <div class="form-area">
+      <form action="#" method="post" autocomplete="on" novalidate>
+        <div class="row">
+          <label for="fullname">Full Name:</label>
+          <div class="control">
+            <input id="fullname" name="fullname" type="text" placeholder="Enter your full name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="email">Email:</label>
+          <div class="control">
+            <input id="email" name="email" type="email" placeholder="Enter valid email address" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="password">Password:</label>
+          <div class="control">
+            <input id="password" name="password" type="password" placeholder="Enter password" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Gender:</label>
+          <div class="control radios" aria-label="Gender">
+            <label><input type="radio" name="gender" value="male" checked> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="course">Course:</label>
+          <div class="control">
+            <select id="course" name="course" required>
+              <option value="">-- Select Course --</option>
+              <option>B.Tech</option>
+              <option>MCA</option>
+              <option>BSc</option>
+              <option>MSc</option>
+              <option>Diploma</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="contact">Contact No:</label>
+          <div class="control">
+            <input id="contact" name="contact" type="tel" placeholder="Enter phone number">
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="address">Address:</label>
+          <div class="control">
+            <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Register</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      &copy; 2025 Student Registration Portal
+    </footer>
+  </div>
+</body>
+</html>
