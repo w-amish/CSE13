@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Restaurant Gallery</title>
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+   }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+   }
+
+   .gallery {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+      gap: 15px;
+      padding: 20px;
+        }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+     }
+
+     @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+        height: auto;
+        }
+      }
+    </style>
+</head>
+
+<body>
+
+<h1>Food Gallery</h1>
+
+<div class="gallery">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/045/778/326/small/indian-cuisine-chicken-butter-masala-photo.jpg" alt="">
+    <img src="https://media.gettyimages.com/id/162759545/photo/paneer-tikka-with-mint-dip-on-plate.jpg?s=612x612&w=0&k=20&c=8ZGqfAUJdHIXovpBR2BiC758yo3PzZRCSDTz9K7-Wyw=" alt="">
+    <img src="https://t3.ftcdn.net/jpg/01/33/61/72/360_F_133617244_dWdivRXwoLVzowl1kn3iFP9JGcuNd8n6.jpg" alt="">
+    <img src="https://images.pexels.com/photos/4315148/pexels-photo-4315148.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://t3.ftcdn.net/jpg/06/76/08/24/360_F_676082419_gE08cs4bXhf1TS1ECPCavcfqcpxZClSl.jpg" alt="">
+    <img src="https://static01.nyt.com/images/2022/01/18/dining/22mc-Easy-Weekend-Waffles-copy/merlin_200484558_c16c33dd-eda4-43a0-a063-29570a6de5f5-jumbo.jpg" alt="">
+</div>
+</body>
+</html>
